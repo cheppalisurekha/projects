@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <b><a href='.html'>ArT pOrTf0Li0 </a></b>
+            </div>
+            <nav>
+            <ul id='MenuItems'>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PAPER</a></li>
+                <li><a href="#">WOODEN</a></li>
+                <li><a href="#">GLASS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><button class='loginbtn' onclick="toggleLoginForm()" style="width:auto;">LOGIN</button></li>
+            </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                        <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                        <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name' required>
+                    <input type='email' class='input-field' placeholder='Email Id' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the T&C</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function toggleLoginForm() {
+                var loginForm = document.getElementById('login-form');
+                if (loginForm.style.display === 'block') {
+                    loginForm.style.display = 'none';
+                } else {
+                    loginForm.style.display = 'block';
+                    login();
+                }
+            }
+            var x = document.getElementById('login');
+            var y = document.getElementById('register');
+            var z = document.getElementById('btn');
+            function register() {
+                x.style.left = '-400px';
+                y.style.left = '60px';
+                y.style.top='80px';
+                z.style.left = '110px';
+            }
+            function login() {
+                x.style.left = '80px';
+                y.style.left = '450px';
+                z.style.left = '0px';
+            }
+            window.onclick = function(event) {
+                var modal = document.getElementById('login-form');
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        </script>
+        <div class="title">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGGB9A0TeCCk-ddUfu0VEpiaNkpFZ-uy4XZ5sg8OW_S2fETwhta_QCCL-_xe7x1XEhTS4&usqp=CAU" alt="Art Portfolio Image" class="title-image">
+            <h1>H@ndm@de H@ppine$$ :)</h1>
+            <h2>~~Bring ur ideas to life</h2>
+            <button onclick="location.href='papercrafts.html'"><b>start crafting</b></button>
+        </div>       
+    </div>   
+</body> 
+</html>
