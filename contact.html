@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <b><a href='index1.html'>ArT pOrTf0Li0 </a></b>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href="index1.html">HOME</a></li>
+                    <li><a href="papercrafts.html">PAPER</a></li>
+                    <li><a href="woodencrafts.html">WOODEN</a></li>
+                    <li><a href="glasscrafts.html">GLASS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><button class='loginbtn' onclick="toggleLoginForm()" style="width:auto;">LOGIN</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h1>Contact Us</h1>
+                    <p>Have questions or feedback? Feel free to reach out to us using the contact details below:</p>
+                    <ul>
+                        <li>Email: info@artportfolio.com</li>
+                        <li>Phone: +1234567890</li>
+                        <li>Address: 123 Art Avenue, Cityville, State, Country</li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleLoginForm() {
+            var loginForm = document.getElementById('login-form');
+            if (loginForm.style.display === 'block') {
+                loginForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'block';
+                login();
+            }
+        }
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '60px';
+            y.style.top='80px';
+            z.style.left = '110px';
+        }
+        function login() {
+            x.style.left = '80px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+        window.onclick = function(event) {
+            var modal = document.getElementById('login-form');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
